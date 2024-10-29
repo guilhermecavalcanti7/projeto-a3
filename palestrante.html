@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palestrante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Confirme sua Palestra (Palestrante)</h2>
+        <form action="processa_palestrante.php" method="POST">
+            <label for="professor">Nome do Professor(a)</label>
+            <input type="text" id="professor" name="professor" placeholder="Nome do Professor(a)..." required>
+            
+            <label for="disciplina">Tema(s)</label>
+            <input type="text" id="disciplina" name="disciplina" placeholder="Tema(s) Abordados..." required>
+            
+            <button type="submit">Confirmar Palestra</button>
+            <a href="gerar_pdf.php" class="button">Gerar PDF</a>
+
+        </form>
+    </div>
+
+    
+</body>
+</html>
