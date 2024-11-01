@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aluno</title>
+    <title>Votação para Representante de Classe</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Confirme sua Presença (Aluno)</h2>
-        <form action="processa_aluno.php" method="POST">
-            <label for="ra">Seu R.A</label>
-            <input type="text" id="ra" name="ra" placeholder="Digite sua matrícula..." required>
-            
-            <label for="nome">Seu Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome..." required>
-            
-            <button type="submit">Confirmar Presença</button>
-        </form>
+    <div class="votacao-container">
+        <h2>Votação para Representante de Classe</h2>
+        <label for="candidato">Selecione o Candidato:</label>
+        <select id="candidato">
+            <option value="alice">Alice Silva</option>
+            <option value="joao">João Souza</option>
+            <option value="maria">Maria Oliveira</option>
+        </select>
+        <button onclick="votar()">Votar</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
