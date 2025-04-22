@@ -1,100 +1,542 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .urna {
-    background-color: #fff;
-    width: 400px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+.urna-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo do VotoClick */
+.logo-votoclick img {
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 300px;
+  padding: 10px;
+  margin-bottom: -43px; /* Ajusta a distância para ficar em cima da urna */
+}
+
+.urna {
+  background-color: #ffffff;
+  width: 673px; /* Largura maior para simular a urna */
+  height: 400px; /* Altura fixa para o layout */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribui os elementos para os lados */
+}
+
+.tela {
+  width: 60%; /* Define a largura da seção da tela de votação */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#numero {
+  font-size: 2rem;
+  width: 100px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.foto {
+  width: 70px;
+  height: 100px;
+  margin: 10px 0;
+  border: 1px solid #000;
+  object-fit: cover;
+}
+
+.teclado {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  font-size: 1.2rem;
+  width: 80px;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.comandos {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  gap: 10px; /* Espaço entre os botões */
+}
+
+.btn {
+  width: 115px;
+  background-color: #ff4d00;
+  color: #000000;
+}
+
+.branco {
+  background-color: #cfcbcb;
+}
+
+.corrige {
+  background-color: #ff4000;
+}
+
+.confirma { 
+  background-color: #3cff00;
+}
+.tela-fim {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100vw; 
+  background-color: #fff; /* Fundo branco para destacar o texto */
+  color: #000; /* Cor preta para o texto */
+  font-size: 8rem; /* Aumente para deixar bem grande */
+  font-weight: bold;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #187adc, #1111bc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container principal */
+.login-container {
+  width: 60%;
+  max-width:700px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Seção do formulário */
+.form-section {
+  flex: 4;
+  text-align: center;
+  padding-right: 20px;
+}
+
+.form-section h1 {
+  font-size: 2rem;
+  color: #ff7300;
+  margin-bottom: 60px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.input-group input {
+  width: 80%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #766969;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.btn-login {
+  width: 80%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #ff7300;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 42px;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #ff5400;
+}
+
+/* Estilo para o logo abaixo do botão */
+.logo-unifg {
+  text-align: center;
+  margin-top: 20px; /* Espaço entre o botão e o logo */
+}
+
+.logo-unifg img {
+  width: 100px; /* Ajuste a largura do logo */
+  opacity: 0.8; /* Transparência suave */
+  transition: opacity 0.3s; /* Suavizar ao passar o mouse */
+}
+
+.logo-unifg img:hover {
+  opacity: 1; /* Logo ficará totalmente visível ao passar o mouse */
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.75rem;
+  margin-top: 10px;
+  color: #555;
+}
+
+.login-links a {
+  color: #928475;
+  text-decoration: none;
+}
+
+/* Seção do logo principal */
+.logo-section {
+  flex: 1;
+  text-align: left;
+}
+
+.logo-section h2 {
+  font-size: 3rem;
+  color: #003399;
+  margin-bottom: 10px;
+}
+
+.logo-section img {
+  width: 300px;
+  margin-top: 10px;
+}
+
+/* Garantir espaçamento correto */
+.login-content {
+  display: flex;
+  width: 100%;
+}
+
+/* Estilos Gerais */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #313dff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 90%;
+  height: 90vh;
+  background-color: white;
+  border-radius: 33px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #f0f0f0;
+  width: 11%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top-left-radius: 31px;
+  border-bottom-left-radius: 31px;
+}
+
+.profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid orange;
+  object-fit: cover;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu li {
+  margin: 10px 0;
+  color: #888;
+  font-weight: bold;
+}
+
+.unifg-logo img {
+  width: 155px;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 301px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  height: 100%;
+}
+
+.box {
+  background-color: #eaeaea;
+  border-radius: 15px;
+}
+
+/* Dropdown Estilo */
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: #585756;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 107%;
+  padding: 22px 8px;
+}
+
+.dropdown-btn:hover {
+  color: #0073e6;
+}
+
+.dropdown-content {
+  display: none;
+  list-style: none;
+  padding-left: 10px;
+  margin: 0;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.dropdown-content li {
+  padding: 8px 10px;
+  cursor: pointer;
+  color: #555;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content li:hover {
+  background-color: #ddd;
+}
+
+/* Grid principal */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+  grid-gap: 20px; /* Espaço entre as telas */
+  padding: 20px; /* Espaçamento entre o grid e a borda da página */
+}
+
+/* Cada tela */
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden; /* Evita que a imagem extrapole os limites */
+  width: 100%;
+  height: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  transition: transform 0.3s ease; /* Transição suave no zoom */
+}
+
+/* Imagens */
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche mantendo proporção */
+  transition: transform 0.3s ease; /* Transição suave para o zoom */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.grid-item:hover img {
+  transform: scale(1.1); /* Aplica o zoom de 10% */
+}
+
+/* Estilo para o conteúdo principal */
+.content-layout {
+  margin: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-header h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.content-body p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.content-placeholder {
+  height: 200px;
+  background: #eaeaea;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Link ativo na sidebar */
+.menu a.active {
+  font-weight: bold;
+  color: #0073e6;
+}
+
+
+/* Estilo para a foto circular */
+.profile-photo {
+  display: flex;
+  justify-content: left;
+  margin: 20px 0;
+}
+
+.profile-photo img {
+  width: 100px; /* Tamanho da imagem */
+  height: 100px;
+  border-radius: 50%; /* Torna a imagem circular */
+  object-fit: cover;
+  border: 3px solid #ccc; /* Adiciona uma borda sutil */
+}
+
+/* Estilo para a descrição */
+.description {
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 25px;
+  font-size: 1.0rem;
+  color: #333;
+  line-height: 1.6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.573);
+}
+
+/* Estilo para o botão Iniciar Votação */
+.vote-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-vote {
+  display: inline-block;
+  background-color: #ff7300;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.btn-vote:hover {
+  background-color: #ff5400; /* Cor laranja mais escura */
+}
+
+/* Estilização do logo VotoClick */
+.logo-votoclick {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px; /* Espaçamento inferior */
+}
+
+.logo-votoclick img {
+  width: 221px; /* Ajuste conforme necessário */
+  opacity: 0.9;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-votoclick img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo para o título "Eleição 2024" */
+.tela h1 {
+  font-size: 2.5rem; /* Aumente ou diminua o valor para alterar o tamanho */
+  font-weight: bold; /* Mantém o texto em negrito */
+  color: #000267; /* Cor preta */
+  margin-bottom: 10px; /* Espaçamento inferior */
+  text-align: center; /* Centraliza o texto */
+}
+
+.tela h2{
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000267;
+    margin-bottom: 10px;
     text-align: center;
-  }
-  
-  .tela {
-    margin-top: 20px;
-  }
-  
-  .display {
-    margin-bottom: 20px;
-  }
-  
-  #numero {
-    font-size: 2rem;
-    width: 100px;
-    margin: 10px 0;
-    text-align: center;
-  }
-  
-  .foto {
-    width: 100px;
-    height: 120px;
-    margin: 10px 0;
-    border: 1px solid #000;
-  }
-  
-  .teclado {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .linha {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  button {
-    font-size: 1.5rem;
-    width: 80px;
-    height: 60px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #ddd;
-  }
-  
-  .comandos {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-  }
-  
-  .btn {
-    width: 100px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .branco {
-    background-color: #bbb;
-  }
-  
-  .corrige {
-    background-color: #e74c3c;
-  }
-  
-  .confirma {
-    background-color: #2ecc71;
-  }
-  
-  .tela-fim {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000;
-    color: #fff;
-    font-size: 5rem;
-  }
-  
+}
+
+/* Estilo para o texto "DIGITE O NÚMERO DO SEU ELEITOR" */
+.display p {
+  font-size: 0.90rem;  /* Tamanho do texto */
+  font-weight: bold;  /* Texto em negrito */
+  color: #000267;     /* Cor preta */
+  text-align: center; /* Centraliza o texto */
+  text-transform: uppercase; /* Mantém o texto em maiúsculo */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
